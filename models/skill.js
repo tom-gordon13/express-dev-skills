@@ -1,8 +1,8 @@
 const skills = [
-    {id: 125223, skill: 'Javascript', level: 'beginner'},
-    {id: 454324, skill: 'Python', level: 'intermediate'},
-    {id: 984521, skill: 'CSS', level: 'beginner'},
-    {id: 094323, skill: 'Swimming', level: 'Expert'}
+    {id: 125223, skill: 'Javascript', level: 'Beginner'},
+    {id: 454324, skill: 'Python', level: 'Intermediate'},
+    {id: 984521, skill: 'CSS', level: 'Beginner'},
+    {id: 094323, skill: 'Shining Shoes', level: "I don't shine shoes no more"}
   ];
   
 
@@ -16,5 +16,7 @@ const skills = [
   }
 
   function getOne(skill) {
-    return skills.find(skill => skill.skill === parseInt(skill))
+    return skills.find(s => s.skill === skill)
   }
+
+ 
