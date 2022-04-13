@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <%- include('../partials/head.ejs') -%>
-  <body>
-    <%- include('../partials/skillsNav.ejs') -%>
-    <h1>Wiseguy Skills</h1>
-    
-    <h3>What it takes to be a wiseguy</h3>
-    <hr>
-    <% skills.forEach(s => { %>
-     <a href='skills/<%=  s.skill   %>'> <%= s.skill %></a>
-     - Skill Level: <%= s.level %>
-     <br><br>
-     <% }) %>
-  </body>
-</html>
+<%- include('../partials/head.ejs') -%>
+
+
+  <h1>Wiseguy Skills</h1>
+
+  <h3>What it takes to be a wiseguy</h3>
+  <hr>
+  <% skills.forEach(s=> { %>
+    <a href='skills/<%=  s.skill   %>'><%= s.skill %>
+</a>
+    - Skill Level: <%= s.level %>
+      <br><br>
+      <% }) %>
+        <hr>
+        <a href='/skills/new'>Add a new skill</a>
+        </body>
+
+        </html>

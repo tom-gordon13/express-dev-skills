@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <%- include('../partials/head.ejs') -%>
-  <body>
-    <%- include('../partials/skillsNav.ejs') -%>  
-    <h1><%=skill.skill%></h1>
-      <%- include('../partials/nav.ejs') -%>
-    <p>Check out my skills</p>
-    
+<%- include('../partials/head.ejs') -%>
 
-   
-  </body>
-</html>
+
+
+    <h1>
+        <%=skill.skill%>
+    </h1>
+    <p>I am good at <%=skill.skill%>. My current skill level is <%=skill.level%>.</p>
+    </body>
+
+    </html>
