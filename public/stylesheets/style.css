@@ -27,7 +27,7 @@ a {
 
 li {
   display: inline;
-  width: 600px;
+  width: 200px
 }
 
 p {
@@ -37,4 +37,9 @@ p {
 
 form {
   display: inline;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
 }
