@@ -1,0 +1,14 @@
+<%- include('../partials/head.ejs') -%>
+
+
+
+    <h1>Edit a Skill - <u><%=skill.skill%></u></h1>
+    <form action="/skills/<%= skill.skill %>?_method=PUT" class="update-form" method="POST">
+        Skill: <input type="text" name="skill" value='<%= skill.skill %>'>
+        Level: <input type="text" name="level" value='<%= skill.level %>'>
+        <button type="submit">Update</button>
+    </form>
+
+
+<%- include('../partials/footer.ejs') -%>
+    

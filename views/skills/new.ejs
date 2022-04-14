@@ -1,8 +1,10 @@
 <%- include('../partials/head.ejs') -%>
 
     <h2>Add a new skill</h2>
-    <form action="/todos" method="POST" autocomplete="off">
-        <p>Skill: </p><input type="text" name="todo">
+    <form action="/skills" method="POST" autocomplete="off">
+        <p>Skill: </p><input type="text" name="skill">
         <p>Level: </p><input type="text" name="level">
         <button type="submit">Wiseguy!</button>
     </form>
+
+<%- include('../partials/footer.ejs') -%>

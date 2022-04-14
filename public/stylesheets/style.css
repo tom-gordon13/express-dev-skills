@@ -1,6 +1,11 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: rgb(103, 73, 73);
+  /* text-align: center; */
+  /* display: flex; */
+  /* align-items: center; */
 }
 
 a {
@@ -11,19 +16,25 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 a {
-  display: block;
+  display: inline;
   font-size: 20px;
 }
 
 li {
-  display: block;
+  display: inline;
   width: 600px;
 }
 
 p {
   color: black;
+  display: inline;
+}
+
+form {
   display: inline;
 }

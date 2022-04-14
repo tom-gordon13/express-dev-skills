@@ -5,14 +5,19 @@
 
   <h3>What it takes to be a wiseguy</h3>
   <hr>
-  <% skills.forEach(s=> { %>
-    <a href='skills/<%=  s.skill   %>'><%= s.skill %>
-</a>
-    - Skill Level: <%= s.level %>
+  <% skills.forEach(s => { %>
+    <a href='/skills/<%=  s.skill   %>'><%= s.skill %></a>
+    <form action="/skills/<%= s.id %>?_method=DELETE" class="delete-form" method="POST">
+      <button type="submit">Delete Skill</button>
+    </form>
+    <form action="/skills/<%= s.skill %>/edit" class="edit-form" method="GET">
+      <button type="submit">Edit Skill</button>
+    </form>
+    <br>
+      Skill Level: <%= s.level %>
       <br><br>
       <% }) %>
+
         <hr>
         <a href='/skills/new'>Add a new skill</a>
-        </body>
-
-        </html>
+        <%- include('../partials/footer.ejs') -%>

@@ -1,3 +1,5 @@
+const req = require("../controllers/skills");
+
 const skills = [
     {id: 125223, skill: 'Javascript', level: 'Beginner'},
     {id: 454324, skill: 'Python', level: 'Intermediate'},
@@ -8,7 +10,10 @@ const skills = [
 
   module.exports = {
     getAll, 
-    getOne
+    getOne, 
+    create, 
+    deleteOne, 
+    update
   };
   
   function getAll() {
@@ -18,5 +23,27 @@ const skills = [
   function getOne(skill) {
     return skills.find(s => s.skill === skill)
   }
+
+  function create(skill) {
+    console.log(skill)
+    skill.id = Date.now() % 1000000;
+    // skill.level = level;
+    skills.push(skill);
+  }
+
+  function deleteOne(id) {
+    let newId = parseInt(id)
+    skills.splice(skills.findIndex((skill) => skill.id === newId), 1);
+  }
+
+  function update(skill, body) {
+    let s = skills.findIndex(s => s.skill === skill);
+    skills[s].skill = body.skill;
+    skills[s].level = body.level;
+    }
+
+ 
+
+
 
  
